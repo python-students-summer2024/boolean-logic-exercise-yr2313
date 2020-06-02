@@ -3,6 +3,10 @@ import solutions
 class Tests:
 
     def test_is_sweltering(self, monkeypatch):
+        """
+        Check whether the function returns True for temperatures above 90, and False for temperatures 90 and below.
+        """
+
         # test with a super hot temperature
         monkeypatch.setattr("builtins.input", lambda x: '121')
         result = solutions.is_sweltering()
@@ -19,6 +23,10 @@ class Tests:
         assert result == False
 
     def test_is_warm(self, capsys, monkeypatch):
+        """
+        Check whether the function returns True for temperatures between 75 and 87, inclusive, and False for other temperatures.
+        """
+
         # test with a super hot temperature
         monkeypatch.setattr("builtins.input", lambda x: '121')
         result = solutions.is_warm()
@@ -40,6 +48,10 @@ class Tests:
         assert result == False
 
     def test_is_humid(self, capsys, monkeypatch):
+        """
+        Check whether the function returns True if the user answers "yes", and False otherwise.
+        """
+
         # test with a 'yes'
         monkeypatch.setattr("builtins.input", lambda x: 'yes')
         result = solutions.is_humid()
@@ -51,6 +63,10 @@ class Tests:
         assert result == False
 
     def test_is_inclement(self, capsys, monkeypatch):
+        """
+        Check whether the function returns True if the user answers "rain", "snow", or "sleet"; and False otherwise.
+        """
+
         # test with 'rain'
         monkeypatch.setattr("builtins.input", lambda x: 'rain')
         result = solutions.is_inclement()
@@ -77,6 +93,9 @@ class Tests:
         assert result == False
 
     def test_is_typical_new_york_summer(self, capsys, monkeypatch):
+        """
+        Check whether the function returns True if the is_sweltering() function returns True and the is_humid() function returns True;  False otherwise.
+        """
         # test with a hot temperature and humidity
         monkeypatch.setattr("solutions.is_sweltering", lambda: True)
         monkeypatch.setattr("solutions.is_humid", lambda: True)
@@ -102,6 +121,9 @@ class Tests:
         assert result == False
 
     def test_is_cool_and_nice(self, capsys, monkeypatch):
+        """
+        Check whether the function returns True if the is_sweltering() function returns False and the is_humid() function returns False;  False otherwise.
+        """
         # test with a hot temperature and humidity
         monkeypatch.setattr("solutions.is_sweltering", lambda: True)
         monkeypatch.setattr("solutions.is_humid", lambda: True)
