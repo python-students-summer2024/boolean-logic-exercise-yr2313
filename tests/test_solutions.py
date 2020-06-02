@@ -124,26 +124,50 @@ class Tests:
         """
         Check whether the function returns True if the is_sweltering() function returns False and the is_humid() function returns False;  False otherwise.
         """
-        # test with a hot temperature and humidity
+        # test with hot, humid, warm, and inclement
         monkeypatch.setattr("solutions.is_sweltering", lambda: True)
         monkeypatch.setattr("solutions.is_humid", lambda: True)
+        monkeypatch.setattr("solutions.is_warm", lambda: True)
+        monkeypatch.setattr("solutions.is_inclement", lambda: True)
         result = solutions.is_cool_and_nice()
         assert result == False
 
-        # test with a hot temperature but no humidity
+        # test with hot, humid, not warm, and not inclement
         monkeypatch.setattr("solutions.is_sweltering", lambda: True)
         monkeypatch.setattr("solutions.is_humid", lambda: False)
+        monkeypatch.setattr("solutions.is_warm", lambda: False)
+        monkeypatch.setattr("solutions.is_inclement", lambda: False)
         result = solutions.is_cool_and_nice()
         assert result == False
 
-        # test with a cool temperature and humidity
+        # test with not hot, humid, not warm, and not inclement
         monkeypatch.setattr("solutions.is_sweltering", lambda: False)
         monkeypatch.setattr("solutions.is_humid", lambda: True)
+        monkeypatch.setattr("solutions.is_warm", lambda: False)
+        monkeypatch.setattr("solutions.is_inclement", lambda: False)
         result = solutions.is_cool_and_nice()
         assert result == False
 
-        # test with a cool temperature and no humidity
+        # test with not hot, not humid, warm, and not inclement
         monkeypatch.setattr("solutions.is_sweltering", lambda: False)
         monkeypatch.setattr("solutions.is_humid", lambda: False)
+        monkeypatch.setattr("solutions.is_warm", lambda: True)
+        monkeypatch.setattr("solutions.is_inclement", lambda: False)
+        result = solutions.is_cool_and_nice()
+        assert result == False
+
+        # test with not hot, not humid, not warm, and inclement
+        monkeypatch.setattr("solutions.is_sweltering", lambda: False)
+        monkeypatch.setattr("solutions.is_humid", lambda: False)
+        monkeypatch.setattr("solutions.is_warm", lambda: True)
+        monkeypatch.setattr("solutions.is_inclement", lambda: True)
+        result = solutions.is_cool_and_nice()
+        assert result == False
+
+        # test with not hot, not humid, not warm, and not inclement
+        monkeypatch.setattr("solutions.is_sweltering", lambda: False)
+        monkeypatch.setattr("solutions.is_humid", lambda: False)
+        monkeypatch.setattr("solutions.is_warm", lambda: False)
+        monkeypatch.setattr("solutions.is_inclement", lambda: False)
         result = solutions.is_cool_and_nice()
         assert result == True

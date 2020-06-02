@@ -60,7 +60,7 @@ def is_cool_and_nice():
   """
   This function determines whether it is cool and nice today.  It does so by relying on other functions defined above.
   Requirements:
-  - You must use the functions, is_sweltering(), is_warm(), is_humid(), and is_inclement defined above to determine whether it is cool and nice today.
+  - You must use the functions, is_sweltering(), is_warm(), is_humid(), and is_inclement() defined above to determine whether it is cool and nice today.
   - The weather is considered cool if these functions all return False.
 
     :returns: True if the weather is cool and nice today, False otherwise.
