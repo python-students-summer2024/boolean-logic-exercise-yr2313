@@ -1,6 +1,8 @@
 # Boolean Expressions Practice
 
-A few boolean expression puzzles to solve. The given code contains some incomplete functions that you must complete to achieve the desired behavior.
+A few boolean expression puzzles to solve. The given code in [solutions.py](./solutions.py) contains several incomplete functions that you must complete to achieve the desired behavior. That is all you must do.
+
+To run the program, run the file named [main.py](./main.py).
 
 ## Clone this repository
 
@@ -26,16 +28,16 @@ Helpful video:
 
 The file named `solutions.py` contains several functions that must be completed in order for the program to work. Each function contains a description of what it should do.
 
-The only modifications you must make in order to complete this assignment are to these functions in this one file.
+The only modifications you must make in order to complete this assignment are to these functions definitions in this one file. Do not modify any code outside of these function definitions.
 
 ### Run the program
 
-To run the program, run the file named `main.py`. The code in this file makes use those functions you have modified in `solutions.py` to produce and output the Mad Lib text.
+To run the program, run the file named `main.py`. The code in this file makes use those functions you have modified in `solutions.py` to produce the intended behavior and output of the program.
 
 ### Verify the output is correct
 
-Running the `main.py` program should call each of the functions in order. Each function asks the user to enter certain input, and the `main` function prints out some meaningful message in response to the user's input.
+Running the `main.py` program makes use of the functions defined in `solutions.py`. Each function asks the user to enter certain input, and the `main` function prints out some meaningful message in response to the user's input.
 
 ### Verify that the tests pass
 
-Pytest-based tests are included in the `tests` directory that will help you determine whether each function is operating as expected. If the functions have been completed correctly, all tests should pass. You should not edit any files in the `test` directory.
+Pytest-based tests are included in the `tests` directory that will help you determine whether each function is operating as expected. If the functions have been completed correctly, all tests should pass. You should not modify any files in the `test` directory.
