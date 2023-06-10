@@ -40,6 +40,10 @@ Running the `main.py` program makes use of the functions defined in `solutions.p
 
 ### Verify that the tests pass
 
-Pytest-based tests are included in the `tests` directory that will help you determine whether each function is operating as expected. If the functions have been completed correctly, all tests should pass. You should not modify any files in the `test` directory.
+Pytest-based tests are included in the `tests` directory that will help you determine whether each function is operating as expected. You should not edit any files in the `test` directory. Run these tests from the `Tests` panel within Visual Studio Code. Running the test files directly does nothing.
 
-If the tests do not appear, or seem to never stop loading, open up a Terminal window and run the command, `pytest --collect-only`, to see whether there are any errors in the code that prevent the tests from being discovered.
+If your code has been completed correctly, all tests should pass. Failed tests indicate problems in your code. Failed tests will usually show an "`AssertionError`" message that may be helpful identifying where the error is in your code.
+
+If the tests do not appear in the `Tests` panel at all, or seem to never stop loading, or you experience other problems with them that prevent you from running them, open up a Terminal window and run the command, `pytest --collect-only`, to see whether there are any errors in your code that prevent the tests from being discovered. If there are no errors reported from that command, try running the tests directly from the Terminal with the command, `pytest`.
+
+In addition to syntax errors in your code, a common error that prevents the tests from running at all is indentation errors, where your code is incorrectly placed outside of (i.e. not indented within) any function. These usually result in a "`reading from stdin while output is captured!`" error when trying to run the tests from Terminal using the `pytest` command.
