@@ -1,24 +1,24 @@
 import solutions
 
-class Tests:
 
+class Tests:
     def test_is_sweltering(self, monkeypatch):
         """
         Check whether the function returns True for temperatures above 90, and False for temperatures 90 and below.
         """
 
         # test with a super hot temperature
-        monkeypatch.setattr("builtins.input", lambda x: '121')
+        monkeypatch.setattr("builtins.input", lambda x: "121")
         result = solutions.is_sweltering()
         assert result == True
 
         # test with the threshold temperature
-        monkeypatch.setattr("builtins.input", lambda x: '90')
+        monkeypatch.setattr("builtins.input", lambda x: "90")
         result = solutions.is_sweltering()
         assert result == False
 
         # test with a cold temperature
-        monkeypatch.setattr("builtins.input", lambda x: '52')
+        monkeypatch.setattr("builtins.input", lambda x: "52")
         result = solutions.is_sweltering()
         assert result == False
 
@@ -28,22 +28,22 @@ class Tests:
         """
 
         # test with a super hot temperature
-        monkeypatch.setattr("builtins.input", lambda x: '121')
+        monkeypatch.setattr("builtins.input", lambda x: "121")
         result = solutions.is_warm()
         assert result == False
 
         # test with the threshold temperature
-        monkeypatch.setattr("builtins.input", lambda x: '87')
+        monkeypatch.setattr("builtins.input", lambda x: "87")
         result = solutions.is_warm()
         assert result == True
 
         # test with the threshold temperature
-        monkeypatch.setattr("builtins.input", lambda x: '75')
+        monkeypatch.setattr("builtins.input", lambda x: "75")
         result = solutions.is_warm()
         assert result == True
 
         # test with a cold temperature
-        monkeypatch.setattr("builtins.input", lambda x: '52')
+        monkeypatch.setattr("builtins.input", lambda x: "52")
         result = solutions.is_warm()
         assert result == False
 
@@ -53,12 +53,12 @@ class Tests:
         """
 
         # test with a 'yes'
-        monkeypatch.setattr("builtins.input", lambda x: 'yes')
+        monkeypatch.setattr("builtins.input", lambda x: "yes")
         result = solutions.is_humid()
         assert result == True
 
         # test with a 'no'
-        monkeypatch.setattr("builtins.input", lambda x: 'no')
+        monkeypatch.setattr("builtins.input", lambda x: "no")
         result = solutions.is_humid()
         assert result == False
 
@@ -68,27 +68,27 @@ class Tests:
         """
 
         # test with 'rain'
-        monkeypatch.setattr("builtins.input", lambda x: 'rain')
+        monkeypatch.setattr("builtins.input", lambda x: "rain")
         result = solutions.is_inclement()
         assert result == True
 
         # test with 'snow'
-        monkeypatch.setattr("builtins.input", lambda x: 'snow')
+        monkeypatch.setattr("builtins.input", lambda x: "snow")
         result = solutions.is_inclement()
         assert result == True
 
         # test with 'sleet'
-        monkeypatch.setattr("builtins.input", lambda x: 'sleet')
+        monkeypatch.setattr("builtins.input", lambda x: "sleet")
         result = solutions.is_inclement()
         assert result == True
 
         # test with something else
-        monkeypatch.setattr("builtins.input", lambda x: 'foo')
+        monkeypatch.setattr("builtins.input", lambda x: "foo")
         result = solutions.is_inclement()
         assert result == False
 
         # test with something else
-        monkeypatch.setattr("builtins.input", lambda x: 'bar')
+        monkeypatch.setattr("builtins.input", lambda x: "bar")
         result = solutions.is_inclement()
         assert result == False
 
