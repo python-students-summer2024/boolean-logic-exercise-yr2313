@@ -47,3 +47,12 @@ If your code has been completed correctly, all tests should pass. Failed tests i
 If the tests do not appear in the `Tests` panel at all, or seem to never stop loading, or you experience other problems with them that prevent you from running them, open up a Terminal window and run the command, `pytest --collect-only`, to see whether there are any errors in your code that prevent the tests from being discovered. If there are no errors reported from that command, try running the tests directly from the Terminal with the command, `pytest`.
 
 In addition to syntax errors in your code, a common error that prevents the tests from running at all is indentation errors, where your code is incorrectly placed outside of (i.e. not indented within) any function. These usually result in a "`reading from stdin while output is captured!`" error when trying to run the tests from Terminal using the `pytest` command.
+
+## Submit your work
+
+Each student must submit this assignment individually. Use Visual Studio Code to perform git `stage`, `commit` and `push` actions to submit. These actions are all available as menu items in Visual Studio Code's Source Control panel.
+
+1. Type a short note about what you have done to the files in the `Message` area, and then type `Command-Enter` (Mac) or `Control-Enter` (Windows) to perform git `stage` and `commit` actions.
+1. Click the `...` icon next to the words, "Source Control" and select "Push" to perform the git `push` action. This will upload your work to your repository on GitHub.com.
+
+![Pushing work in Visual Studio Code](./images/vscode_stage_commit_push.png)
