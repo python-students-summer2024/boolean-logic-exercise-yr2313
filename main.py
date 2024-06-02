@@ -39,5 +39,5 @@ def main():
         print("I wish it were cool and nice today.")
 
 
-# call the main function
+#call the main function
 main()
