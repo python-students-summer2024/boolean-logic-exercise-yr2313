@@ -18,7 +18,6 @@ def is_sweltering():
         return True
     else:
         return False
-#is_sweltering()
 
 def is_warm():
     """
@@ -34,7 +33,6 @@ def is_warm():
         return True
     else:
         return False
-#is_warm()
 
 def is_humid():
     """
@@ -50,7 +48,6 @@ def is_humid():
         return True
     if current_humidity == "no":
         return False
-#is_humid()
 
 def is_inclement():
     """
@@ -66,7 +63,6 @@ def is_inclement():
         return True
     else:
         return False
-#is_inclement()
 
 def is_typical_new_york_summer():
     """
@@ -83,7 +79,6 @@ def is_typical_new_york_summer():
         return True
     else:
         return False
-#is_typical_new_york_summer()
 
 def is_cool_and_nice():
     """
@@ -99,4 +94,3 @@ def is_cool_and_nice():
         return True
     else:
         return False
-#is_cool_and_nice()
